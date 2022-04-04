@@ -1,9 +1,15 @@
 #include <iostream>
 #include<iomanip>
 using namespace std;
+struct NS{
+	int ngay;
+	int thang;
+	int nam;
+};
 
 class khachhang{
 	private:
+		NS ns;
 		char ht[30];
 		char cmt[10];
 		char k[50];
@@ -12,24 +18,13 @@ class khachhang{
 		void xuat()	;	
 };
 
-struct NS{
-	int ngay;
-	int thang;
-	int nam;
-};
 
 
 void khachhang::nhap(){
-	NS ns;
+
 	cout<<"\nNhap ho ten khach hang : ";
 	cin.getline(ht,30);
-	cout<<"\nNhap ngay sinh :  ";
 	cin>>ns.ngay;
-	cout<<"\nNhap thang sinh :  ";
-	cin>>ns.thang;
-	cout<<"\nNhap nam sinh :  ";
-	cin>>ns.nam;
-	fflush(stdin);
 	cout<<"\nNhap so chung minh thu : ";
 	cin.getline(cmt,10);
 	cout<<"\nNhap ho khau : ";
@@ -47,20 +42,7 @@ void khachhang::xuat(){
 		cout<<"---------------"<<endl;
 	
 }
-void sapxep(){
-	
-}
-	for(int i=0;i<n;i++){
-		for(int j=i+1;j<n;j++){
-			if(a[i].namxb < a[j].namxb){
-				qlsach tg=a[i];
-				a[i]=a[j];
-				a[j]=tg;
-			}
-		}
-	}
-	xuat(a,n);
-}
+
 int main()
 {	
 	int n;
