@@ -41,16 +41,16 @@ class KH
 		  		<<"Chung minh thu : "<<a.cmt<<endl
 			  	<<"Ho khau : "<<a.k<<endl;
 			  	
-			  return os;		  
+			  return os;
+			  		  
 		}	
-		void xuat();
-
+		bool operator >(const KH  & a) const{
+			return(a.ns.nam>a.ns.nam+1);
+		}
+		
 };
-void KH ::xuat(){
-	if(KH.cmt=='Ha Noi'){
-		cout << " ";
-	}
-}
+
+
 
 int main()
 {
@@ -70,6 +70,10 @@ int main()
 		cout<<a[i];
 		cout<<"\n";
 	}
-	
+	for(int i = 0; i < n; i++)
+	{
+		cout<<a[i];
+		cout<<"\n";
+	}
 	return 0;
 }

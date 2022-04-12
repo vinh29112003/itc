@@ -1,0 +1,42 @@
+#include<iostream.h>
+
+
+struct ngayxuatban{
+	int ngay;
+	int thang;
+	int nam;
+};
+class ANPHAM{
+	private:
+		char mh[20];
+		char ten[30];
+		float dongia;
+		ngayxuatban nxb;
+	
+	public:
+		ANPHAM(char *mh = "", char *ten = "", float dongia = 0, ngayxuatban nxb = 0)
+		{		
+					strcpy(this -> mh,mh);
+					strcpy(this -> ten,ten);
+							this ->	dongia = dongia;
+							this -> nxb = nxb;
+					
+		}
+		
+		~ANPHAM(){};
+		
+		friend istream& operator >>(istream& is , ANPHAM &a)
+		{
+			cout<<"\nNhap ma hang : ";
+			is.getline(a.mh,20)<<endl;
+			cout<<"\nTen nha xuat ban : ";
+			is.getlinea.ten<<endl;
+			cout<<"\nNhap ngay xuat ban : ";
+			is>>a.nxb<<endl;
+		}
+};
+
+int main(){
+	return 0;
+}
+
